@@ -1,0 +1,93 @@
+:root {
+    --couleur-bordure: #350909;
+    --couleur-texte:#350909;
+    --couleur-biscuit:#350909;
+    --couleur-boutons: #e56921a1;
+}
+
+body{
+    background-image: url("../img/background.jpg");
+    display:flex;
+    justify-content: center;
+}
+
+.carte{
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto auto;
+    color:var(--couleur-texte);
+    border-radius: .4rem;
+    padding: 2rem;
+    margin-top: 5rem ;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.36);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.grid-item1, .grid-item2 {
+    padding: 1.5rem;
+}
+
+.grid-item1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--couleur-bordure);
+}
+
+
+.grid-item2{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+.pro{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.biscuit b{
+    font-size: 40px;
+}
+
+#titre{
+    font-size: 30px;
+}
+
+button{
+    padding: .35rem;
+    background-color: var(--couleur-boutons);
+    color: white;
+    border-radius: .5rem;
+    border-style: none;
+} 
+
+.bouton{
+    display: flex;
+}
+
+#sauv{
+padding: 5px 5px;
+}
+
+/* Code par ChatGPT  à partir d'ici*/
+.sauvegarder{
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+
+
+
