@@ -7,25 +7,28 @@
     <title>Clicker à biscuits</title>
 </head>
 <body>
+    <script defer src="./assets/javascript/script.js"></script>
     <div class="carte">
             <div class="grid-item1">
                 <p class="biscuit">
                     <span class="pro">0 biscuits </span><br>
                     par seconde : 0<br>
                     par clic : 1</p>
-                <img src="./assets/img/cookie.png" width="170px">
+                
+                <input type="image" class="biscuit-btn" src="./assets/img/cookie.png" width="170px">
+        
             </div>
 
             <div class="grid-item2">
                 <p id="titre"><b>Boutique</b></p>
 
-                <button class="bouton">
+                <button class="bouton" id="curseur">
                     <img src="./assets/img/curseur.png" width="55px">
                     
                     Ajout curseur<br>
                     50 biscuit(s)</button>
 
-                <button class="bouton">
+                <button class="bouton" id="souris">
                     <img src="./assets/img/mouse.png" width="55px">
                     Amélioration souris <br>
                     200 biscuit(s)</button>  
