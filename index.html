@@ -12,8 +12,8 @@
             <div class="grid-item1">
                 <p class="biscuit">
                     <span class="pro">0 biscuits </span><br>
-                    par seconde : 0<br>
-                    par clic : 1</p>
+                    <span id="parSeconde">par seconde : 0</span><br>
+                    <span id="parClic">par clic : 1</span></p>
                 
                 <input type="image" class="biscuit-btn" src="./assets/img/cookie.png" width="170px">
         
@@ -24,14 +24,20 @@
 
                 <button class="bouton" id="curseur">
                     <img src="./assets/img/curseur.png" width="55px">
+                    <div>
+                        Ajout curseur<br>
+                    <span id="prixNbCurseur">2 biscuit(s)</span>
+                    </div>
                     
-                    Ajout curseur<br>
-                    50 biscuit(s)</button>
+                </button>
 
-                <button class="bouton" id="souris">
+                <button class="bouton" id="souris"> 
                     <img src="./assets/img/mouse.png" width="55px">
-                    Amélioration souris <br>
-                    200 biscuit(s)</button>  
+                    <div>
+                        Amélioration souris<br>
+                        <span id="prixNbClic">1 biscuits</span>
+                    </div>
+                </button>  
 
                 <div class="sauvegarder">
                     <p>Kateri Pariseau | 2025</p>
