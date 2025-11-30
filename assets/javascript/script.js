@@ -3,6 +3,7 @@ let parsecondeNb = 0;
 let parclicNb = 1;
 let seconde = 0;
 
+
 const compteur = document.getElementsByClassName("pro")[0];
 
 const biscuit = document.getElementsByClassName("biscuit-btn")[0];
@@ -21,7 +22,7 @@ biscuit.addEventListener("click", () =>{
 
 //Achat curseur
 curseur.addEventListener("click", () =>{
-    if(parsecondeNb<=biscuitsTotal){
+    if(parsecondeNb < biscuitsTotal){
         parsecondeNb++;
         parSeconde.innerHTML = "par seconde : " + parsecondeNb;
         prixNbCurseur.innerHTML = " "+ parsecondeNb + " biscuit(s)";
