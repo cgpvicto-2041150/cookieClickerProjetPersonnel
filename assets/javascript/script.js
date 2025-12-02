@@ -15,7 +15,9 @@ const parClic = document.getElementById("parClic");
 const prixNbClic = document.getElementById("prixNbClic");
 const prixNbCurseur = document.getElementById("prixNbCurseur");
 
+
 prixNbCurseur.innerHTML = CalculePrixCurseur() + " biscuit(s)";
+prixNbClic.innerHTML = CalculePrixClic() + " biscuit(s)";
 
 biscuit.addEventListener("click", () =>{
     biscuitsTotal+=parclicNb;
@@ -41,10 +43,18 @@ curseur.addEventListener("click", () =>{
 
 //Achat souris
 souris.addEventListener("click", () =>{
-    if(parclicNb<=biscuitsTotal){
+
+    const prix = CalculePrixClic();
+
+    if(biscuitsTotal >= prix){
+        biscuitsTotal -= prix;
         parclicNb++;
+        compteur.innerHTML = biscuitsTotal + " biscuits";
+
         parClic.innerHTML = "par click : " + parclicNb;
-        prixNbClic.innerHTML = " " + parclicNb + " biscuit(s)";
+
+        const prochainPrix = CalculePrixClic();
+        prixNbClic.innerHTML = prochainPrix + " biscuit(s)";
     }
     
 });
@@ -54,6 +64,8 @@ setInterval(()=>{
     compteur.innerHTML = biscuitsTotal +" biscuits"
 }, 1000);
 
+
+//Code fourni par le prof
 function CalculePrixCurseur(){
     const base =50;
     const alpha = 0.25;
@@ -61,5 +73,16 @@ function CalculePrixCurseur(){
 
     const totalCurseur = parsecondeNb;
     const prix = base * Math.pow(1+alpha, Math.pow(totalCurseur, beta));
+    return Math.round(prix);
+}
+
+//Code fourni par le prof
+function CalculePrixClic(){
+    const base = 70;
+    const alpha = 0.25;
+    const beta = 1.05;
+    const totalAmelioration = parclicNb - 1;
+
+    const prix = base * Math.pow(1 + alpha, Math.pow(totalAmelioration, beta));
     return Math.round(prix);
 }
