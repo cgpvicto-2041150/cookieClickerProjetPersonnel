@@ -143,3 +143,5 @@ if(localStorage.getItem('biscuits') !==null){
     verifierNombreBiscuitsCurseur();
     verifierNombreBiscuitsClic();
 }
+
+//localStorage.clear();
