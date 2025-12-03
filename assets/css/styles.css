@@ -76,6 +76,8 @@ button{
     display: flex;
 }
 
+
+
 #sauv{
 padding: 5px 5px;
 }
@@ -86,6 +88,10 @@ padding: 5px 5px;
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
+
+}
+.sauvegarder:active{
+    transform: translateY(4px);
 }
 
 .biscuit-btn:active {
