@@ -144,4 +144,3 @@ if(localStorage.getItem('biscuits') !==null){
     verifierNombreBiscuitsClic();
 }
 
-//localStorage.clear();
